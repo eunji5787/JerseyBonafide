@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BonaFide Plus Assignment Submission</title>
+<script type="text/javascript" src="resources/js/InputHandler.js"></script>      
+</head>
+<body>
+        <h1>BonaFide Plus Assignment Submission</h1>
+        <form action="jersey/rest/getdata" method="post" id="validation"> 
+            <p>
+               Student Name : <input type="text" name="stname" onkeydown="return NotNumber(event)"  data-rule-required="true" placeholder="required"/> 
+            </p>
+            <p>
+               Student Number : <input type="text" name="stnum" onkeydown="return OnlyNumber(event)" maxlength="10" data-rule-required="true"  placeholder="required"/>
+               ( Ex, 2012004496 )   Input only number
+            </p>            
+            <p>
+               User Token : <input type="text" name="usertoken"  data-rule-required="true"  placeholder="required"/>
+            </p>            
+            <p>
+            <input type="radio" name="Provider" value="SKT" checked>SKT
+			<input type="radio" name="Provider" value="KT">KT
+			<input type="radio" name="Provider" value="LGT">LGT
+            </p>            
+            <p>
+               Data Plan : <input type="text" name="dataplan" />
+            </p>
+            <p>
+            <input type="radio" name="Network" value="3G" checked>3G
+			<input type="radio" name="Network" value="LTE">LTE
+			<input type="radio" name="Network" value="LTE-A">LTE-A
+			<input type="radio" name="Network" value="3 Band LTE">3 Band LTE
+            </p>
+            <input type="submit" value="submit" />
+        </form>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script type="text/javascript">
+	$('#validation').validate();
+</script>
+</body>
+</html>
