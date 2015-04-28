@@ -14,11 +14,10 @@ $("input[name='Network']").change(function(){
 	   }
 	   else{
 		   
-	       $("#Network_text").hide(); 
-	       
+		   $("#Network_text").hide();
 	   }
 
-	});
+});
 
 $('#Network_text').on('keyup', function(){
     $("#Network_etc").val($(this).val());     
